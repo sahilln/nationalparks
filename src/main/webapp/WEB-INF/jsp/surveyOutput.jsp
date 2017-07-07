@@ -25,7 +25,7 @@
 
 <tr>
 <td><img src="img/parks/${parkCodeLower}.jpg"></td>
-
+<td>${parkCode}</td>
 
 
 <td> 
