@@ -1,9 +1,10 @@
 package com.techelevator.npgeek.model;
 
-public class SurveyDao {
+import java.util.List;
 
-	public SurveyDao() {
-		// TODO Auto-generated constructor stub
-	}
+public interface SurveyDao {
+
+	public List<Survey> getAllSurveyResults();
+	public void save(Survey submission);
 
 }
