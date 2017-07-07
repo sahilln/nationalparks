@@ -14,17 +14,16 @@
     		
     		<c:url value="/img/logo.png" var="logoSrc" />
        
-        		<img src="${logoSrc}"  />
+        		<img id="logo" src="${logoSrc}"  />
       
-        
-        <c:url value="/homePage" var ="homePage"/>
+ 	
+ 		<c:url value="/homePage" var ="homePage"/>
         <c:url value="/surveyInput" var ="survey"/>
         
-        
-        <h1>National Park Geek</h1>    
+          
     </header>
-    <nav>
-        <ul>
+    <nav id="navbar">
+        <ul id="links">
             <li><a href="${homePage }">Home</a></li>
             <li><a href="${survey}">Survey</a></li>
        
