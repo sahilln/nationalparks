@@ -58,7 +58,11 @@ public class JDBCParkDao implements ParkDao{
 								"LIMIT 5";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlReturnCount);
 		while(results.next()){
-			parks.add(mapRowToPark(results));	
+			
+			Park park = mapRowToPark(results);
+				park.setCount(results.getInt("count"));
+			parks.add(park);
+			
 		}
 		return parks;
 	}

@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
@@ -9,7 +10,8 @@
 
 
 <h2> National Park Survey</h2>
-<form action ="surveyInput" method ="POST">
+
+<form:form action ="surveyInput" method ="POST" modelAttribute="survey">
 
 
 <label for="parkCode">Favorite Park:</label>
@@ -27,11 +29,11 @@
 </select><br>
 <br>
 
-<label for="emailAddress">Email Address</label>
-<input  type="text" name="emailAddress" required/><br>
+<label for="emailAddress">Email</label>
+			<form:input path="emailAddress" />  
 
 <label for="state">State Of Residence</label>
-<select name="state" required>
+<select name="state">
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
@@ -87,14 +89,14 @@
 <br>
 
 <label for="activityLevel">Activity Level</label>  
-<input type="radio" name ="activityLevel" value="inactive">Inactive
+<input type="radio" checked="true" name ="activityLevel" value="inactive">Inactive
 <input type="radio" name ="activityLevel" value="sedentary">Sedentary
 <input type="radio" name ="activityLevel" value="active">Active
 <input type="radio" name ="activityLevel" value="extremely active">Extremely Active <br>
 
 <input type="submit" value="Submit"/><br>
 
-</form>
+</form:form>
 
 
 

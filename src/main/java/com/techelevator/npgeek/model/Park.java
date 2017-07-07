@@ -17,9 +17,16 @@ public class Park {
 	private String parkDescription;
 	private int entryFee;
 	private int numAnimalSpecies;
+	private int count;
 	
 	
 	
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public String getParkCode() {
 		return parkCode;
 	}

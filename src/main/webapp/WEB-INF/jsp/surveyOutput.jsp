@@ -16,8 +16,8 @@
 <td> </td>
 <th> Park Name </th>
 <th> Number of Votes</th>
-<c:forEach var="submission" items="${surveyResults}" >
-<c:set var="parkCode" value="${submission.parkCode}"/>
+<c:forEach var="park" items="${topParks}" >
+<c:set var="parkCode" value="${park.parkCode}"/>
 <c:set var="parkCodeLower" value= "${fn:toLowerCase(parkCode)}"/>
 
 
@@ -25,7 +25,8 @@
 
 <tr>
 <td><img src="img/parks/${parkCodeLower}.jpg"></td>
-<td>${parkCode}</td>
+<td>${park.parkName}</td>
+<td>${park.count }
 
 
 <td> 
