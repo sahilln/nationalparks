@@ -12,7 +12,8 @@
 		<c:set var="parkCodeLower" value="${fn:toLowerCase(parkCode)}" />
 		
 		<div id="parkInfo">
-		<a href="parkDetail?parkCode=${park.parkCode}"><img id="homeImage" src="img/parks/${parkCodeLower}.jpg"></a>
+		<a href="parkDetail?parkCode=${park.parkCode}&celsius=${celsius}"><img id="homeImage" src="img/parks/${parkCodeLower}.jpg"></a>
+		
 		
 		<p id="parkName"> ${park.parkName} </p>
 		

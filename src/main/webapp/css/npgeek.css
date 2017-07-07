@@ -19,7 +19,8 @@
 
 #homeImage{
 	float: left;
-	padding: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
 }
 
 #parkInfo{
@@ -28,12 +29,15 @@
 
 #parkName{
 	padding-top: 10px;
-	font-size: 25px;
+	font-size: 40px;
 	font-weight: bold;
+	text-align: center;
+	color: white;
 }
 
 .main-section{
-	background-color: #c2aa62;
+	background-color: #426bf4;
+	padding: 30px;
 }
 
 #forecast-image{
@@ -42,7 +46,63 @@
 }
 
 table{
-    border: 1px solid black;
+    border: 1px solid white;
     table-layout: fixed;
     width: 1000px;
+    margin-left:auto; 
+    margin-right:auto;
 }
+
+td{
+	text-align: center;
+}
+
+#detailImage{
+	width: 50%;
+	height: auto;
+	margin: auto;
+    padding: 10px;
+    
+}
+
+#parkState{
+	font-size: 20px;
+}
+
+#navbar{
+	text-align: center;
+	color: green;
+}
+
+#quote{
+	color: white;
+	font-style: italic;
+	font-size: 18px;
+}
+#detailDescription{
+	font-size: 18px;
+}
+#changeTemp{
+	text-align: center;
+}
+
+#fun{
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

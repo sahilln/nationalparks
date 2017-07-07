@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.techelevator.npgeek.model.ParkDao;
 import com.techelevator.npgeek.model.WeatherDao;
 
-@SessionAttributes("Celsius")
+@SessionAttributes("celsius")
 @Controller
 public class ParkDetailController {
 	

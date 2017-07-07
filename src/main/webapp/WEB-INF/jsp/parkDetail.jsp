@@ -1,21 +1,30 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
 <html>
 <body>
-
+<div class = "main-section">
 	<c:set var="parkCode" value="${park.parkCode}" />
 	<c:set var="parkCodeLower" value="${fn:toLowerCase(parkCode)}" />
-	<img src="img/parks/${parkCodeLower}.jpg">
+	<img id="detailImage" src="img/parks/${parkCodeLower}.jpg"><br>
 	<br>
-
-	<p id="parkName">${park.parkName}</p>
+	<span id="parkName"><c:out value="${park.parkName}"/></span><br>
+	
+	<span id="parkState"><c:out value="${park.state}"/></span>
 	<br>
-	<p> Description: ${park.parkDescription} </p>
+	
 	<br>
-	<c:out value="State: ${park.state}" />
+	<span id="quote"><c:out value="${park.inspirationalQuote}"/></span><br>
+	<span id="quote"><c:out value=" -${park.inspirationalQuoteSrc}"/></span>
+	<br>
+	
+	<span id="detailDescription"><p>${park.parkDescription} </p></span>
+	<br>
+	
+	<span id="fun"><c:out value="Fun Facts:"/></span>
 	<br>
 	<c:out value="Acres: ${park.acreage}" />
 	<br>
@@ -31,9 +40,7 @@
 	<br>
 	<c:out value="Annual Visitors: ${park.annualVisitors}" />
 	<br>
-	<c:out
-		value="Quote: ${park.inspirationalQuote} by: ${park.inspirationalQuoteSrc}" />
-	<br>
+	
 	<c:out value="Entry Fee: ${park.entryFee} dollars" />
 	<br>
 	<c:out value="Number of Animal Species: ${park.numAnimalSpecies}" />
@@ -54,8 +61,8 @@
 		<img id="forecast-image" src="img/weather/${day.forecast}.png" />
 		<c:choose>
 			<c:when test="${celsius}">
-				<p>Low: ${day.lowTemp}C</p>
-				<p>High: ${day.highTemp}C</p>
+				<p>Low: <fmt:formatNumber type = "number" maxIntegerDigits="2" value = "${(day.lowTemp - 32) * (5/9)}" />C</p>
+				<p>High: <fmt:formatNumber type = "number" maxIntegerDigits="2" value = "${day.highTemp - 32 * (5/9)}" />C</p>
 			</c:when>
 			<c:otherwise>
 				<p>Low: ${day.lowTemp}F</p>
@@ -95,7 +102,11 @@
 	</c:forEach>
 	
 	</tr>
-	<a href="parkDetail?parkCode=${park.parkCode}&celsius=${!celsius}">Change Between Celsius and Fahrenheit</a>
+	
+</table>
+<br>
+<a id = "changeTemp" href="parkDetail?parkCode=${park.parkCode}&celsius=${!celsius}">Change Between Celsius and Fahrenheit</a>
 
+</div>
 </body>
 </html>
