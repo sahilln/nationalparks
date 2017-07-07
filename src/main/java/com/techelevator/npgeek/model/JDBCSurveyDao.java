@@ -44,24 +44,6 @@ public class JDBCSurveyDao implements SurveyDao {
 		
 	}
 	
-
-	public List<Survey> getSubmissionCount(){
-		
-		List<Survey> submissionCount = new ArrayList<>();
-		
-		String sqlReturnCount = "SELECT parkCode, COUNT (*) FROM survey_result GROUP BY parkCode ORDER BY COUNT DESC LIMIT 5";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlReturnCount);
-		while(results.next()){
-			Survey survey = new Survey();
-			survey.setParkCode(results.getString("parkCode"));
-			survey.setCount(results.getInt("count"));
-			submissionCount.add(survey);	
-		}
-		return submissionCount;
-		
-	}
-	
-	
 	private int getNextId() {
 		String sqlSelectNextId = "SELECT NEXTVAL('seq_surveyId')";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectNextId);

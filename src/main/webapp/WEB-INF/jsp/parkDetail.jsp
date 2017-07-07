@@ -39,7 +39,6 @@
 	<c:out value="Number of Animal Species: ${park.numAnimalSpecies}" />
 	<br>
 	<br>
-	
 <table>
 	<tr>
 		<th>Today</th>
@@ -53,8 +52,16 @@
 	<c:forEach var="day" items="${fiveDayList}">
 		<td>
 		<img id="forecast-image" src="img/weather/${day.forecast}.png" />
-		<p>Low: ${day.lowTemp}F</p>
-		<p>High: ${day.highTemp}F</p>
+		<c:choose>
+			<c:when test="${celsius}">
+				<p>Low: ${day.lowTemp}C</p>
+				<p>High: ${day.highTemp}C</p>
+			</c:when>
+			<c:otherwise>
+				<p>Low: ${day.lowTemp}F</p>
+				<p>High: ${day.highTemp}F</p>
+			</c:otherwise>
+		</c:choose>
 
 		<c:choose>
 			<c:when test="${day.forecast == 'snow'}">
@@ -88,7 +95,7 @@
 	</c:forEach>
 	
 	</tr>
-	<a href="parkDetail?parkCode=${park.parkCode}&Celsius=False">Change Between Celsius and Fahrenheit</a>
+	<a href="parkDetail?parkCode=${park.parkCode}&celsius=${!celsius}">Change Between Celsius and Fahrenheit</a>
 
 </body>
 </html>

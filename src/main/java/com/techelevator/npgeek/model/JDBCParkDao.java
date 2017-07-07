@@ -47,6 +47,21 @@ public class JDBCParkDao implements ParkDao{
 		return park;
 	}
 
+	@Override
+	public List<Park> getTopParks() {
+		List<Park> parks = new ArrayList<>();
+		
+		String sqlReturnCount = "SELECT park.*, COUNT (*) as count FROM survey_result " +
+								"JOIN park ON survey_result.parkcode = park.parkCode " +
+								"GROUP BY survey_result.parkCode, park.parkCode " +
+								"ORDER BY COUNT DESC " + 
+								"LIMIT 5";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlReturnCount);
+		while(results.next()){
+			parks.add(mapRowToPark(results));	
+		}
+		return parks;
+	}
 
 	private Park mapRowToPark(SqlRowSet row) {
 		
