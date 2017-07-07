@@ -1,6 +1,6 @@
 package com.techelevator.npgeek.model;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.List;
 
 import javax.sql.DataSource;
