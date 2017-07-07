@@ -1,0 +1,48 @@
+#logo{
+	height: 200px;
+	width: auto;
+}
+
+#links{
+	list-style-type: none;
+}
+
+#links > li{
+	display: inline;
+	padding-left: 30px;
+	font-size: 30px;
+}
+
+#links > a{
+	color: green;
+}
+
+#homeImage{
+	float: left;
+	padding: 30px;
+}
+
+#parkInfo{
+	display: inline-block;
+}
+
+#parkName{
+	padding-top: 10px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.main-section{
+	background-color: #c2aa62;
+}
+
+#forecast-image{
+	width: 100px;
+	height: auto;
+}
+
+table{
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 1000px;
+}

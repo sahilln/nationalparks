@@ -21,7 +21,7 @@ public class ParkDetailController {
 	private WeatherDao weatherDao;
 	
 	@RequestMapping(path = "/parkDetail", method=RequestMethod.GET)
-	public String showParkDetail(ModelMap model, HttpServletRequest request, @RequestParam String parkCode, @RequestParam boolean celsius){
+	public String showParkDetail(ModelMap model, HttpServletRequest request, @RequestParam String parkCode){
 		request.setAttribute("park", parkDao.getParkByCode(parkCode));
 		request.setAttribute("fiveDayList", weatherDao.getFiveDayForecastByCode(parkCode));
 		return "parkDetail";

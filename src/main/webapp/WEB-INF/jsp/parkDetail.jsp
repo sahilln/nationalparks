@@ -11,9 +11,9 @@
 	<img src="img/parks/${parkCodeLower}.jpg">
 	<br>
 
-	<c:out value="${park.parkName}" />
+	<p id="parkName">${park.parkName}</p>
 	<br>
-	<c:out value="Description: ${park.parkDescription}" />
+	<p> Description: ${park.parkDescription} </p>
 	<br>
 	<c:out value="State: ${park.state}" />
 	<br>
@@ -38,13 +38,23 @@
 	<br>
 	<c:out value="Number of Animal Species: ${park.numAnimalSpecies}" />
 	<br>
-
+	<br>
+	
+<table>
+	<tr>
+		<th>Today</th>
+		<th>Tomorrow</th>
+		<th>Day 3</th>
+		<th>Day 4</th>
+		<th>Day 5</th>
+	</tr>
+	<tr>
+	
 	<c:forEach var="day" items="${fiveDayList}">
-		<c:out value="Day 1" />
-		<c:out value="Low: ${day.lowTemp}F" />
-		<c:out value="High: ${day.highTemp}F" />
-		<img src="img/weather/${day.forecast}.png" />
-		<br>
+		<td>
+		<img id="forecast-image" src="img/weather/${day.forecast}.png" />
+		<p>Low: ${day.lowTemp}F</p>
+		<p>High: ${day.highTemp}F</p>
 
 		<c:choose>
 			<c:when test="${day.forecast == 'snow'}">
@@ -72,9 +82,13 @@
 		<c:if test="${day.lowTemp < 20}">
 			<p>Exposure to low temperatures can be dangerous!</p>
 		</c:if>
-		
 
+		
+		</td>
 	</c:forEach>
+	
+	</tr>
+	<a href="parkDetail?parkCode=${park.parkCode}&Celsius=False">Change Between Celsius and Fahrenheit</a>
 
 </body>
 </html>
