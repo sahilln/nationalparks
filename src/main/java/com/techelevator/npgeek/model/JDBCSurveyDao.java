@@ -22,6 +22,7 @@ public class JDBCSurveyDao implements SurveyDao {
 	@Override
 	public List<Survey> getAllSurveyResults() {
 		List<Survey> surveyResults = new ArrayList<>();
+		List<Survey> submissionCount = getSubmissionCount();
 		
 		String sqlReturnSurveyResults = "SELECT * FROM survey_result";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlReturnSurveyResults);
@@ -36,9 +37,28 @@ public class JDBCSurveyDao implements SurveyDao {
 	@Override
 	public void save(Survey submission) {
 		int surveyId = getNextId();
+		
 		String sqlInsertSubmission = "INSERT INTO survey_result(surveyId, parkCode, emailAddress, state, activityLevel) VALUES (?,?,?,?,?)";
 		jdbcTemplate.update(sqlInsertSubmission, surveyId, submission.getParkCode(), submission.getEmailAddress(), submission.getState(), submission.getActivityLevel());
 		submission.setSurveyId(surveyId);
+		
+	}
+	
+
+	public List<Survey> getSubmissionCount(){
+		
+		List<Survey> submissionCount = new ArrayList<>();
+		
+		String sqlReturnCount = "SELECT parkCode, COUNT (*) FROM survey_result GROUP BY parkCode ORDER BY COUNT DESC LIMIT 5";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlReturnCount);
+		while(results.next()){
+			Survey survey = new Survey();
+			survey.setParkCode(results.getString("parkCode"));
+			survey.setCount(results.getInt("count"));
+			submissionCount.add(survey);	
+		}
+		return submissionCount;
+		
 	}
 	
 	

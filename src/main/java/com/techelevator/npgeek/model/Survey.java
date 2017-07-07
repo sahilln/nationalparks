@@ -7,8 +7,14 @@ public class Survey {
 	private String emailAddress;
 	private String state;
 	private String activityLevel;
+	private int count;
 	
-	
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public int getSurveyId() {
 		return surveyId;
 	}

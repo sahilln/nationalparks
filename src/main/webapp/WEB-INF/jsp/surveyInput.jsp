@@ -13,7 +13,7 @@
 
 
 <label for="parkCode">Favorite Park:</label>
-<select name = "parkCode">
+<select name = "parkCode" required>
 	<option value="GNP"> Glacier National Park</option>
 	<option value="GCNP"> Grand Canyon National Park</option>
 	<option value="GTNP"> Grand Teton National Park</option>
@@ -28,10 +28,10 @@
 <br>
 
 <label for="emailAddress">Email Address</label>
-<input  type="text" name="emailAddress"/><br>
+<input  type="text" name="emailAddress" required/><br>
 
 <label for="state">State Of Residence</label>
-<select name="state">
+<select name="state" required>
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>

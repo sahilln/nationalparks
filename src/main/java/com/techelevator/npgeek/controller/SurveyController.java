@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.techelevator.npgeek.model.ParkDao;
 import com.techelevator.npgeek.model.Survey;
 import com.techelevator.npgeek.model.SurveyDao;
 
@@ -18,17 +19,20 @@ public class SurveyController {
 @Autowired
 
 private SurveyDao surveyDao;
+private ParkDao parkDao;
 
 @RequestMapping(path="/surveyOutput", method = RequestMethod.GET)
 public String showSurveyResults(HttpServletRequest request){
 	List<Survey> surveyResults = surveyDao.getAllSurveyResults();
 	request.setAttribute("surveyResults", surveyResults);
 	
+	
 	return "surveyOutput";
 }
 
 @RequestMapping(path = "/surveyInput", method = RequestMethod.GET)
-public String showSurveyInput(HttpServletRequest request){
+public String
+showSurveyInput(HttpServletRequest request){
 	return "surveyInput";
 }
 

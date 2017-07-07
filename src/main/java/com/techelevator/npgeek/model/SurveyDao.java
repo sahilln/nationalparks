@@ -6,5 +6,6 @@ public interface SurveyDao {
 
 	public List<Survey> getAllSurveyResults();
 	public void save(Survey submission);
+	
 
 }
