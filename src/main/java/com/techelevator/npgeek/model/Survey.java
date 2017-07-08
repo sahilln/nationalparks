@@ -7,15 +7,19 @@ public class Survey {
 
 	private int surveyId;
 	
+	@NotBlank(message="Please select a park")
 	private String parkCode;
+	
+	@NotBlank(message="You must enter an email address")
 	@Email(message="Email must be a valid email address")
 	private String emailAddress;
+	
+	@NotBlank(message="Please select a state")
 	private String state;
+	
 	@NotBlank(message="Acivity Level is Required")
 	private String activityLevel;
 
-	
-	
 	public int getSurveyId() {
 		return surveyId;
 	}

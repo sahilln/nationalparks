@@ -13,7 +13,7 @@
 
 <table>
 <tr>
-<td> </td>
+<th> </th>
 <th> Park Name </th>
 <th> Number of Votes</th>
 <c:forEach var="park" items="${topParks}" >
@@ -24,15 +24,9 @@
 
 
 <tr>
-<td><img src="img/parks/${parkCodeLower}.jpg"></td>
+<td><img id="surveyImage" src="img/parks/${parkCodeLower}.jpg"></td>
 <td>${park.parkName}</td>
 <td>${park.count }
-
-
-<td> 
-
- 
-<td></td>
 </tr>
 
 </c:forEach>

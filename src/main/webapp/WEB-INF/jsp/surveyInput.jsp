@@ -15,7 +15,7 @@
 
 
 <label for="parkCode">Favorite Park:</label>
-<select name = "parkCode" required>
+<form:select path="parkCode">
 	<option value="GNP"> Glacier National Park</option>
 	<option value="GCNP"> Grand Canyon National Park</option>
 	<option value="GTNP"> Grand Teton National Park</option>
@@ -26,14 +26,16 @@
 	<option value="YNP2"> Yosemite National Park</option>
 	<option value="CVNP"> Cuyahoga Valley National Park</option>
 	<option value="RMNP"> Rocky Mountain National Park</option>
-</select><br>
+</form:select><br>
+<form:errors path="parkCode" cssClass="error"/>
 <br>
 
 <label for="emailAddress">Email</label>
-			<form:input path="emailAddress" />  
+			<form:input path="emailAddress" /> <br>
+			<form:errors path="emailAddress" cssClass="error"/> <br>
 
 <label for="state">State Of Residence</label>
-<select name="state">
+<form:select path="state">
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
@@ -85,14 +87,16 @@
 	<option value="WV">West Virginia</option>
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
-</select><br>
+</form:select><br>
+<form:errors path="state" cssClass="error"/>
 <br>
 
 <label for="activityLevel">Activity Level</label>  
-<input type="radio" checked="true" name ="activityLevel" value="inactive">Inactive
-<input type="radio" name ="activityLevel" value="sedentary">Sedentary
-<input type="radio" name ="activityLevel" value="active">Active
-<input type="radio" name ="activityLevel" value="extremely active">Extremely Active <br>
+<form:radiobutton checked="true" path ="activityLevel" value="inactive"/>Inactive
+<form:radiobutton path ="activityLevel" value="sedentary"/>Sedentary
+<form:radiobutton path ="activityLevel" value="active"/>Active
+<form:radiobutton path ="activityLevel" value="extremely active"/>Extremely Active <br>
+<form:errors path="activityLevel" cssClass="error"/>
 
 <input type="submit" value="Submit"/><br>
 

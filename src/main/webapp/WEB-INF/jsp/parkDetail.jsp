@@ -26,25 +26,35 @@
 	
 	<span id="fun"><c:out value="Fun Facts:"/></span>
 	<br>
-	<c:out value="Acres: ${park.acreage}" />
-	<br>
-	<c:out value="Elevation: ${park.elevationInFeet}" />
-	<br>
-	<c:out value="Trail Miles: ${park.milesOfTrails}" />
-	<br>
-	<c:out value="Campsites: ${park.numOfCampsites}" />
-	<br>
-	<c:out value="Climate: ${park.climate}" />
-	<br>
-	<c:out value="Year Founded: ${park.yearFounded}" />
-	<br>
-	<c:out value="Annual Visitors: ${park.annualVisitors}" />
-	<br>
+	<table>
+		<tr>
+			<th>Acres</th>
+			<th>Elevation</th>
+			<th>Trail Miles</th>
+			<th>Campsites</th>
+			<th>Climates</th>
+			<th>Year Founded</th>
+			<th>Annual Visitors</th>
+			<th>Entry Fee</th>
+			<th>Number of Animal Species</th>
+		</tr>
+		<tr>
+			<td>${park.acreage}</td>
+			<td>${park.elevationInFeet}</td>
+			<td>${park.milesOfTrails}</td>
+			<td>${park.numOfCampsites}</td>
+			<td>${park.climate}</td>
+			<td>${park.yearFounded}</td>
+			<td>${park.annualVisitors}</td>
+			<td>${park.entryFee}</td>
+			<td>${park.numAnimalSpecies}</td>
+			
+		
+		</tr>	
+			
 	
-	<c:out value="Entry Fee: ${park.entryFee} dollars" />
-	<br>
-	<c:out value="Number of Animal Species: ${park.numAnimalSpecies}" />
-	<br>
+	</table>
+	
 	<br>
 <table>
 	<tr>
