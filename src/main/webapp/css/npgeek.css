@@ -10,8 +10,8 @@ body{
 }
 
 h1{
-	color: white;
-	font-family: "Arial";
+	color: #4e4eff;
+	font-family: "Helvetica";
 	font-size: 100px;
 	font-weight: 400;
 	-webkit-transition: .3s ease-in-out;
@@ -19,7 +19,7 @@ h1{
 }
 
 h1:hover{
-	color: #4e4eff;
+	color: white;
 }
 
 #links{
@@ -120,6 +120,7 @@ td{
 	font-size: 20px;
 	text-align: center;
 	font-family: "Verdana";
+	color: white;
 }
 
 #quote{
@@ -140,6 +141,7 @@ td{
 	font-size: 18px;
 	font-family: "Verdana";
 	text-align: center;
+	color: white;
 }
 #changeTemp{
 	text-align: center;
@@ -165,7 +167,7 @@ h2{
 
 #header{
 	text-align: center;
-	background-color: #2cfca3;
+	background-color: #7bff9d;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	margin: 10px;
@@ -173,9 +175,7 @@ h2{
 
 #navbar{
 	text-align: center;
-	background-color: #65ecb5;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	background-color: #7bff9d;
 	margin: 10px;
 }
 
@@ -188,12 +188,12 @@ a{
 }
 
 a, a:active, a:visited{ 
-	color: white; 
+	color: #4e4eff; 
 	font-family: "Verdana";
 }
 
 a:hover{
-	color: #4e4eff;
+	color: white;
 }
 
 #parkDetailTable{
