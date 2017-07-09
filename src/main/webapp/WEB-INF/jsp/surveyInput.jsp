@@ -7,7 +7,7 @@
 <div class="main-section">
 
 
-	<div id=surveyTitle><c:out value= "National Park Survey"/></div> <br><br>
+	<div id=surveyTitle><c:out value= "Survey"/></div> <br><br>
 	
 	<div id="surveyInput">
 
