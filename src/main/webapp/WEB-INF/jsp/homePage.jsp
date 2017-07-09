@@ -3,28 +3,24 @@
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-<html>
-<body>
-	<div class = "main-section">
+<div class = "main-section">
 	<c:forEach var="park" items="${parkList}">
 
 		<c:set var="parkCode" value="${park.parkCode}" />
 		<c:set var="parkCodeLower" value="${fn:toLowerCase(parkCode)}" />
 		
 		<div id="parkInfo">
-		<a href="parkDetail?parkCode=${park.parkCode}&celsius=${celsius}"><img id="homeImage" src="img/parks/${parkCodeLower}.jpg"></a>
 		
+			<a href="parkDetail?parkCode=${park.parkCode}&celsius=${celsius}"><img id="homeImage" src="img/parks/${parkCodeLower}.jpg"></a>
 		
-		<p id="parkName"> ${park.parkName} </p>
+			<p id="parkName"> ${park.parkName} </p>
 		
-		<p id="parkDescription"> ${park.parkDescription} </p>
+			<p id="parkDescription"> ${park.parkDescription} </p>
 		
 		</div>
 		
 	</c:forEach>
+	
+</div>
 
-	</div>
-
-
-</body>
-</html>
+<c:import url="/WEB-INF/jsp/footer.jsp" />

@@ -11,21 +11,15 @@
 
 <body>
     <header>
-    		
-    		<c:url value="/img/logo.png" var="logoSrc" />
-       
-        		<img id="logo" src="${logoSrc}"  />
-      
- 	
- 		<c:url value="/homePage" var ="homePage"/>
-        <c:url value="/surveyInput" var ="survey"/>
-        
-          
+    		<div id="header">
+ 			
+ 			<c:url value="/homePage" var ="homePage"/>
+ 			
+ 			<h1>NATIONAL PARK SERVICE</h1>
+ 			
+ 			<%-- <c:url value="/homePage" var ="homePage"/>
+     		<c:url value="/img/logo.png" var="logoSrc" />
+       		<a href="${homePage}"><img id="logo" src="${logoSrc}"/></a> --%>
+      	
+      	</div>     
     </header>
-    <nav id="navbar">
-        <ul id="links">
-            <li><a href="${homePage }">Home</a></li>
-            <li><a href="${survey}">Survey</a></li>
-       
-        </ul>
-    </nav>
