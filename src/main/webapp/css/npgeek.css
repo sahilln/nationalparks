@@ -10,12 +10,18 @@ body{
 }
 
 h1{
-	color: #4e4eff;
+	color: #fbbc2f;
 	font-family: "Helvetica";
 	font-size: 100px;
 	font-weight: 400;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+	margin-bottom: 0;
+}
+
+h3{
+	color: #fbbc2f;
+	font-family: "Helvetica";
 }
 
 h1:hover{
@@ -31,12 +37,8 @@ h1:hover{
 	font-size: 30px;
 }
 
-#links > a{
-	color: green;
-}
-
 #homeImage{
-	background-color: #fff;
+	background-color: #122653;
 	border-style: solid;
 	border-width: 5px;
 	width: 600px;
@@ -51,29 +53,29 @@ h1:hover{
 #parkInfo{
 	display: inline-block;
 	padding-bottom: 50px;
+	color: #122653;
 }
 
 #parkName{
 	padding-top: 10px;
 	font-size: 40px;
 	text-align: center;
-	color: white;
+	color: #122653;
 	font-family: "Arial";
 }
 
 #parkDetailName{
 	font-size: 40px;
 	text-align: center;
-	color: white;
+	color: #122653;
 	font-family: "Arial";
 }
 
 .main-section{
-	background-color: #4e4eff;
+	background-color: #ffe465;
 	padding-right: 90px;
 	padding-left: 90px;
 	padding-top: 50px;
-	margin: 10px;
 	
 }
 
@@ -120,11 +122,11 @@ td{
 	font-size: 20px;
 	text-align: center;
 	font-family: "Verdana";
-	color: white;
+	color: #122653;
 }
 
 #quote{
-	color: white;
+	color: #122653;
 	font-style: italic;
 	font-size: 18px;
 	text-align: center;
@@ -134,14 +136,14 @@ td{
 	font-size: 17px;
 	text-align: center;
 	font-family: "Verdana";
-	color: white;
+	color: #122653;
 }
 
 #detailDescription{
 	font-size: 18px;
 	font-family: "Verdana";
 	text-align: center;
-	color: white;
+	color: #122653;
 }
 #changeTemp{
 	text-align: center;
@@ -167,15 +169,14 @@ h2{
 
 #header{
 	text-align: center;
-	background-color: #7bff9d;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin: 10px;
+	background-color: #122653;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #navbar{
 	text-align: center;
-	background-color: #7bff9d;
+	background-color: #122653;
 	margin: 10px;
 }
 
@@ -188,16 +189,16 @@ a{
 }
 
 a, a:active, a:visited{ 
-	color: #4e4eff; 
+	color: white; 
 	font-family: "Verdana";
 }
 
 a:hover{
-	color: white;
+	color: #fbbc2f;
 }
 
 #parkDetailTable{
-	color: white;
+	color: #122653;
 	font-family: "Arial";
 }
 
@@ -205,16 +206,16 @@ a:hover{
 	text-align: center;
 	font-size: 30px;
 	font-family: "Arial";
-	color: white;
+	color: #122653;
 }
 
 #fiveDayTable{
-	color: white;
+	color: #122653;
 	font-family: "Verdana";
 }
 
 #surveyTitle{
-	color: white;
+	color: #122653;
 	font-size: 40px;
 	font-family: "Verdana";
 	text-align: center;
@@ -222,7 +223,7 @@ a:hover{
 
 #surveyInput{
 	text-align: center;
-	color: white;
+	color: #122653;
 	font-family: "Verdana";
 	font-size: 18px;
 }

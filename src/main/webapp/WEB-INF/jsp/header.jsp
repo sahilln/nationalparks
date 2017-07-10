@@ -16,8 +16,9 @@
 			<c:url value="/homePage" var="homePage" />
 
 			<h1>NATIONAL PARKS</h1>
-
-
+			<h3>Your guide to exploring America's protected lands.</h3>
+	
+			
 			<c:url value="/homePage" var="homePage" />
 			<c:url value="/surveyInput" var="survey" />
 
@@ -29,10 +30,6 @@
 
 				</ul>
 			</nav>
-
-			<%-- <c:url value="/homePage" var ="homePage"/>
-     		<c:url value="/img/logo.png" var="logoSrc" />
-       		<a href="${homePage}"><img id="logo" src="${logoSrc}"/></a> --%>
 
 		</div>
 	</header>
