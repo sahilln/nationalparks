@@ -4,8 +4,11 @@
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-<h2>National Park Survey Results</h2>
+<div class = "main-section">
 
+<div id=surveyTitle><c:out value= "Survey Results"/></div> <br><br>
+
+<div class = "surveyTable">
 <table>
 	<tr>
 		<th></th>
@@ -26,5 +29,8 @@
 
 		</c:forEach>
 </table>
+</div>
+
+</div>
 
 <c:import url="/WEB-INF/jsp/footer.jsp" />
